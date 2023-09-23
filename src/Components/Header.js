@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-import Star from '../png/star.png'
 
-export default function Header() {
+import Star from '../png/E1.png'
+
+export default function Header(props){
+
+
+
+    const [darkMode, setDarkMode] = useState(false);
+
+    React.useEffect(() => {
+        if (props.onDarkModeChange) {
+          props.onDarkModeChange(darkMode);
+        }
+      }, [darkMode]);
+
+    
   return (
     <div className="h-100 container">
 
-        <div className="Header row">
+        <div className="Header row ">
             
             <div className='col-sm'>
                 <div>
@@ -17,14 +30,16 @@ export default function Header() {
             </div>
             
             <div className='col-sm'>
-                <div>
+                <div >
                     <img src={Star}></img>
                 </div>
                 <p>21 Eylül 2023 Perşembe / 7 RebiülEvvel 1445</p>
             </div>
             
             <div className='col-sm'>
-                <button>Gece Modu</button>
+                <button onClick={() => setDarkMode(!darkMode)}>
+                    {darkMode ? "Gündüz Modu" : "Gece Modu"}
+                </button>
                 <div >
                     <h1>İSTANBUL</h1>
                     <h2>00:45:23</h2>

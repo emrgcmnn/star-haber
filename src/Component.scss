@@ -1,3 +1,44 @@
+.slick-prev, .slick-next {
+    z-index: 1000;
+}
+.slick-prev {
+    left: -60px; /* Bu değeri ihtiyacınıza göre ayarlayın */
+}
+
+.slick-next {
+    right: -80px; /* Bu değeri ihtiyacınıza göre ayarlayın */
+}
+
+.slick-prev, .slick-next {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.ww-w {
+   
+    background-color: white;
+    button {
+        width: 100px;
+        font-size: 11px;
+        border: none; // border'ı kaldırır
+        background-color: black; // arka planı siyah yapar
+        color: white; // yazı rengini beyaz yapar
+        border-radius: 20px; // köşeleri yuvarlak yapar, istediğiniz yuvarlaklık seviyesini ayarlamak için bu değeri değiştirebilirsiniz
+        padding: 2px 10px; // button'un iç padding'i, daha iyi bir görüntü i   
+    }
+}
+.ww-w.dark-mode {
+    background-color: rgb(58, 58, 58); /* ya da istediğiniz gri ton */
+    color: white;
+    
+    button {
+        background-color: white; // arka planı siyah yapar
+        color: black; // yazı rengini beyaz yapar
+   
+  }
+  padding-bottom: 500px;
+}
+
 
 
 .h-100{
@@ -15,42 +56,58 @@
     align-items: center;
     
 }
+
+.haber-container {
+    display: grid;
+    grid-template-columns: auto 1fr; /* saatdiv için otomatik genişlik, haberic için geri kalan genişlik */
+    grid-gap: 10px; /* Bu, her bir öğe arasına 10px boşluk ekler */
+}
+  
 .slider{
     background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(120, 0, 0));
     width: 100%;
     height: 50px;
-    div {
-        color: white;
-        display: flex;
-        :first-child{
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0   ;
-            padding: 0;
-        }
-        :last-child{
-            flex: 11    ;
-            display: flex;
-            align-items: center;
-            
-            overflow-x:hidden;          
-            white-space: nowrap;
-            div {
-                
-                margin-right: 5px;
-                padding: 2px;
-                :first-child {
-                    background-color: yellow;
-                    color: black;
-                }
-            }
-            
-            
-        }
-        
-    }
-    
+   
 }
+ .anaSlider {
+    color: white;
+    display: flex;
+ }  
+
+ .sndak {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0   ;
+    padding: 0;
+ }
+ .haberkay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-gap: 10px;  // Bu, her bir öğe arasına 10px boşluk ekler
+    flex: 10;
+    flex-direction: row; /* Haberlerin yanyana sıralanmasını sağlar */
+    align-items: center;
+    overflow-x: hidden; /* Yatayda taşan içeriği gizler */
+    white-space: nowrap;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+
+}
+.haberkay2 {
+    
+   margin-right: 20px;
+   
+}
+
+  .saatdiv {
+    background-color: yellow;
+    color: black;
+    margin-right: 5px;
+  }
+
+    
+
 
 .reklam {
     width: 100%;
@@ -61,51 +118,52 @@
     padding: 0 30px;
 }
 
-.Haber {
-    :first-child {
-        width: 100%;
-        height: 400px;
-    }
-    :last-child {
-        width: 100%;
-        div {
-           
-            height: 78px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border: 20px;
-            border-color: grey;
-            background-color: black;
-            
-            
-            a {
-                display: flex;
-                text-decoration: none;
-                
-                img{
-                    flex: 1; // Bu, her bir div'in eşit genişlikte olmasını sağlar.
-                    text-align: center;
-                    width: 50px;
-                    height: 50px;
-                    border: none;
-                   
-                    
-                    
 
-                }
-                span{
-                    flex: 1; // Bu, her bir div'in eşit genişlikte olmasını sağlar.
-                    padding: 8px;
-                    text-align: center;
-                    height: 70px;
-                    font-size:10px;
-                    color: white;
-                    
+
+.resimGaleri {
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding:2px  10px;
+    border: 1px gray solid;
+    :first-child {
+        :first-child{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;  
+            div{
+                border: none;
+                img{
+                    border: none;
+                    border-radius: 50%;
+                    width: 55px;
+                    height: 55px;
+                    margin-right: 10px;
                 }
             }
+            span{
+                font-size: small;
+            }
+    
+            
         }
-
     }
+   
+    
+   
+}
+.aktif{
+    border: none;
+    background-color: red;
+    height: 1px;
+    width: 100%;
+    display: flex;
+
+   
 }
 
 
@@ -114,7 +172,7 @@
     height: 40px;  /* Çizginin yüksekliği */
     background-color: white;  /* Çizginin rengi */
     margin-left: 10px;  /* Sol taraftan boşluk */
-    margin-right: 10px;  /* Sağ taraftan boşluk */
+    margin-right: 30px;  /* Sağ taraftan boşluk */
     margin-top: 5px;
     
 }
@@ -154,7 +212,7 @@
 .Header {
     display: flex;
     height: 100%;
-    
+   
 
     // İçerisindeki 3 ana div için:
     > div {
@@ -192,8 +250,8 @@
             // İkinci div için özel stil (eğer gerekiyorsa)
 
             img {
-              
-                height: 100px;
+               padding-top: 10px;
+                height: 70px;
             }
             p {
                 font-size: 11px;
@@ -205,14 +263,7 @@
       
            
             
-            button {
-                font-size: 11px;
-                border: none; // border'ı kaldırır
-                background-color: black; // arka planı siyah yapar
-                color: white; // yazı rengini beyaz yapar
-                border-radius: 20px; // köşeleri yuvarlak yapar, istediğiniz yuvarlaklık seviyesini ayarlamak için bu değeri değiştirebilirsiniz
-                padding: 2px 10px; // button'un iç padding'i, daha iyi bir görüntü i   
-            }
+           
             h1 {
                 padding-right: 10px;
                 font-size: 17px;

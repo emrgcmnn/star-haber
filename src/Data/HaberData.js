@@ -7,7 +7,7 @@ const NewsData = [
     {
         id: 2,
         time: '20:30',
-        title: 'Teknoloji dünyasında yeni bir devrim: Uçan arabalar'
+        title: 'Teknoloji dünyasında yeni bir devrim: '
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const NewsData = [
     {
         id: 5,
         time: '17:20',
-        title: 'Kültür ve sanatta bu haftanın öne çıkanları'
+        title: 'Kültür ve sanatta bu haftanın fırsatları'
     }
 ];
 
