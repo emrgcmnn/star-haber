@@ -1,5 +1,4 @@
- ![Example Image](./src/png/star-clone-page.png)
-
+ 
  ### responsive edildi
   ### gece modu butonu dinamik
   ### girilen dataya göre namaz vaktine kalan süre güncelleniyor
