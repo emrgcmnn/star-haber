@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 
 export default function HeaderNav() {
   return (
-    <div className='container'>
+    <div className='container ustNavbar'>
       <div className='HeaderNav '>
         <div > 
             <a> SON DAKİKA</a>

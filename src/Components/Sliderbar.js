@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect  } from "react";
 import Slider from "react-slick";
 import NewsData from '../Data/HaberData'
 
@@ -6,15 +6,37 @@ import NewsData from '../Data/HaberData'
 
 export default function Sliderbar() {
 
+    const [slidesToShow, setSlidesToShow] = useState(calculateSlidesToShow());
+
+  function calculateSlidesToShow() {
+    const width = window.innerWidth;
+    
+    if (width <= 990) {
+      return 1;
+    } else if (width <= 1400) {
+      return 2;
+    } else {
+      return 3;
+    }
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setSlidesToShow(calculateSlidesToShow());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   
     var settings = {
       dots: false,
-      infinite: true,
-      slidesToShow: 3,
+      infinite: false,
+      slidesToShow:slidesToShow,
       slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: true
+      autoplay: false,
     }
   
   
@@ -30,7 +52,7 @@ export default function Sliderbar() {
                           <div className='haberkay2 col-sm' key={newsItem.id}>
                               <div className="haber-container">
                                   <div className='saatdiv'>{newsItem.time}</div>
-                                  <div className='haberic'>{newsItem.title}</div>
+                                  <div >{newsItem.title}</div>
                               </div>
                           </div>
                       ))}

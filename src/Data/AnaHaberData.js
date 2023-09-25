@@ -20,7 +20,7 @@ const AnaData = [
     {
         id: 3,
         res: res3,
-        baslik: 'Ekonomik krizle ilgili yeni açıklamalarFransızlardan 100. yıl yorumu: Başkan',
+        baslik: 'Ekonomik krizle ilgili yeni açıklamalar',
         ayrinti:"Fransızlardan 100. yıl yorumu: Başkan Erdoğan, Atatürk'ün mirasını yeniden yazıyor"
     },
     {

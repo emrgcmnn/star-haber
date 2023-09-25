@@ -13,18 +13,19 @@ import { SiMaildotru } from 'react-icons/si';
 
 export default function Navbar() {
   return (
-    <div className=' bg-settings'>
+    <>
+    <div className=' bg-settings '>
         <div className='container sirala'>
             <div className='row '>
                 
-                <div class="col">
+                <div class="col ">
                     <div className='f-s-15'><a className='pad-1'>DOLAR</a>27,1188</div>
                     <div className='f-s-15'><a className='pad-1'>EURO</a>28.9447 </div>
                     <div className='f-s-15'><a className='pad-1'>ALTIN</a>1672.2</div>
                     <div className='f-s-15'><a className='pad-1'>BIST100</a>7947.02 </div>
                 </div>
                 
-                <div class="col j-bet">
+                <div class="col j-bet mb-dev-Navbar">
                     <div className='f-s-15'>
                         <img className='img-w pad-1' src={Ph}></img> FOTO GALERİ
                     </div>
@@ -65,5 +66,9 @@ export default function Navbar() {
         </div>
 
     </div>
+
+    
+    
+    </>
   )
 }
