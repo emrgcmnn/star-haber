@@ -111,26 +111,24 @@
     
 
 
-.reklam {
+  .reklam {
     width: 100%;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
     overflow: hidden;
-    div{
-        img{
-            height: min-content;
-        }
-    }
-    
-    
-}
-.anaresim{
-    height:fit-content; 
 }
 
+.reklam-resim {
+    padding: 30px;
+    width: 100%;
+    height: 100%; /* veya belirli bir yükseklik değeri */
+    object-fit: fill;
+}
+.haberresim {
+    width: 80%;
+}
 
 .resimGaleri {
     color: white;

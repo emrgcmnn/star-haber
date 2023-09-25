@@ -19,7 +19,7 @@ export default function Haber() {
     return (
         <div className="container haberresim">
             
-            <div className="row anaresim">
+            <div className="row ">
                 {selectedImage && <img src={selectedImage} alt="Seçilen Resim" />}
             </div>
            

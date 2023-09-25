@@ -3,11 +3,9 @@ import Reklams from '../png/reklamor.png'
 
 export default function Reklam() {
   return (
-    <div class="container ">
-      <div class="row reklam">
-       <img src={Reklams}></img>
-        
-       
+    <div className="container">
+      <div className="row reklam">
+       <img src={Reklams} alt="Reklam" className="reklam-resim" />
       </div>
     </div>
   )
