@@ -5,6 +5,8 @@ import res3 from '../png/res3.png';
 import res4 from '../png/res4.png';
 import res5 from '../png/res5.png';
 
+import Reklams from '../png/reklamor.png'
+
 export default function Haber() {
     const [selectedImage, setSelectedImage] = useState(res1);
     const [activeImage, setActiveImage] = useState(res1); 
@@ -15,8 +17,9 @@ export default function Haber() {
     };
 
     return (
-        <div className="container ">
-            <div className="row ">
+        <div className="container haberresim">
+            
+            <div className="row anaresim">
                 {selectedImage && <img src={selectedImage} alt="Seçilen Resim" />}
             </div>
            
